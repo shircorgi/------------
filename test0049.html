@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        float: left;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      #grad1 {
+        background: linear-gradient(to right bottom, #1fd1f9, #b621fe);
+      }
+      #grad2 {
+        background: linear-gradient(45deg, #1fd1f9, #b621fe);
+      }
+      #grad3 {
+        background: linear-gradient(45deg, #1fd1f9, red 30%, #b621fe);
+      }
+      #grad4 {
+        background: radial-gradient(#1fd1f9, red 30%, #b621fe);
+        width: 300px;
+      }
+      #grad5 {
+        background: radial-gradient(circle, #1fd1f9, red 30%, #b621fe);
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grad1"></div>
+    <div id="grad2"></div>
+    <div id="grad3"></div>
+    <div id="grad4"></div>
+    <div id="grad5"></div>
+  </body>
+</html>

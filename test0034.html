@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul,
+      li {
+        list-style: none;
+      }
+
+      label {
+        float: left;
+        width: 110px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+
+      input[required] {
+        border: 1px solid red;
+      }
+
+      input[readonly] {
+        border: none;
+      }
+      input[text="text"],
+      input[type="password"],
+      input[type="password"],
+      input[type="email"] {
+        width: 200px;
+      }
+      #btn-fieldset {
+        border: none;
+      }
+      button {
+        background-color: black;
+        color: #ccc;
+      }
+      button:hover {
+        background-color: #ccc;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>form design</h1>
+    <p>p324, p334, p348</p>
+    <h2>label align</h2>
+    <form action="">
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+            <label for="userid">ID</label>
+            <input type="text" id="userid" name="userid" required autofocus />
+          </li>
+          <li>
+            <label for="userpw1">PW</label>
+            <input type="password" id="userpw1" name="userpw1" required />
+          </li>
+          <li>
+            <label for="userpw2">PW 확인</label>
+            <input type="password" id="userpw2" name="userpw2" required />
+          </li>
+          <li>
+            <label for="userlevel">회원등급</label>
+            <input
+              type="text"
+              id="userlevel"
+              name="userlevel"
+              readonly
+              value="준회원"
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+          <li>
+            <label for="username">name</label>
+            <input
+              type="text"
+              placeholder="5자 미만 공백 없이"
+              id="username"
+              name="username"
+              required
+            />
+          </li>
+          <li>
+            <label for="useremail">email address </label>
+            <input
+              type="email"
+              placeholder="admin@damain.com"
+              id="useremail"
+              name="useremail"
+              required
+            />
+          </li>
+          <li>
+            <label for="usertel">tel</label>
+            <input type="tel" id="usertel" name="usertel" required />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset id="btn-fieldset">
+        <button type="submit">제출</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

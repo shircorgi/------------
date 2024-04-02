@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        /*grid-template-columns: 200px 200px 200px;*/
+        /* grid-template-columns: 1fr 1fr 1fr;*/
+        /*grid-template-rows: 200px 200px 200px 200px;*/
+        /*grid-template-columns: 1fr;*/
+        /*row 개수가 늘어날 수 있기 때문에 repeat를 사용하여 rows 갯수 지정을 하지 않아도 된다.*/
+        /*grid-template-columns: repeat(3, 1fr);*/
+        /* grid-template-rows: minmax(200px, auto);*/
+        grid-template-columns: repeat(auto-fit, 200px);
+        background-color: orange;
+      }
+
+      .items {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="items">오라오라오라오라오라오라오라오라오라</div>
+      <div class="items">무다무다무다무다무다무다무다무다무다</div>
+      <div class="items">레로레로레로레로레로레로레로레로레로</div>
+      <div class="items">으뤼리리리리리리리리리리리리리리리릿</div>
+      <div class="items">아리아리아리아리아리아리아리아리아리</div>
+    </div>
+  </body>
+</html>

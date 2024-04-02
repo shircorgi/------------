@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px 20px;
+      }
+
+      #container2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .items {
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container1">
+      <div class="items">오라오라오라오라오라오라오라오라오라</div>
+      <div class="items">무다무다무다무다무다무다무다무다무다</div>
+      <div class="items">레로레로레로레로레로레로레로레로레로</div>
+      <div class="items">으뤼리리리리리리리리리리리리리리리릿</div>
+      <div class="items">아리아리아리아리아리아리아리아리아리</div>
+    </div>
+    <div id="container2">
+      <div class="items">오라오라오라오라오라오라오라오라오라</div>
+      <div class="items">무다무다무다무다무다무다무다무다무다</div>
+      <div class="items">레로레로레로레로레로레로레로레로레로</div>
+      <div class="items">으뤼리리리리리리리리리리리리리리리릿</div>
+      <div class="items">아리아리아리아리아리아리아리아리아리</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방문한 / 하지 않은 사이트에 효과주기</title>
+    <style>
+      .navi ul {
+        list-style: none;
+      }
+
+      .navi ul li {
+        float: left;
+      }
+      .navi a {
+        padding: 20px;
+        text-decoration: none;
+        color: black;
+      }
+      .navi a:hover {
+        color: pink;
+      }
+      .navi a:active {
+        background-color: yellowgreen;
+      }
+      .content {
+        clear: both;
+      }
+      #intro:target,
+      #room:target {
+        background-color: bisque;
+      }
+      textarea:disabled {
+        background-color: bisque;
+      }
+      input:checked + label {
+        color: red;
+      }
+      #room-type {
+        list-style: none;
+      }
+      /*input[type="text"],
+      input[type="tel"] {
+        border: 1px solid blue;
+      }*/
+
+      input:not([type="radio"]) {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navi">
+        <ul>
+          <li><a href="#intro">이용 안내</a></li>
+          <li><a href="#room">객실 소개</a></li>
+          <li><a href="#">예약 방법 및 요금</a></li>
+          <li><a href="#reservation">예약하기</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div id="intro">
+          <h2>이용 안내</h2>
+          <p>어쩌고 저쩌고</p>
+        </div>
+        <div id="room">
+          <h2>객실 소개</h2>
+          <p>이러쿵 저러쿵</p>
+        </div>
+
+        <div id="reservation">
+          <h2>예약하기</h2>
+          <form action="">
+            <textarea disabled cols="30" rows="10">
+이용약관이 어쩌고 저쩌고</textarea
+            ><br />
+            <label for="customer-name">고객명</label>
+            <input type="text" name="customerName" id="customer-name" />
+            <br />
+            <label for="tel-num">Tel.</label>
+            <input type="text" name="telNum" id="tel-num" />
+
+            <ul id="room-type">
+              <li>
+                <input type="radio" name="room" id="basic" />
+                <label for="basic">기본형</label>
+              </li>
+
+              <li>
+                <input type="radio" name="room" id="family" />
+                <label for="family">가족형</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <a href="https://www.daum.net">to daum</a>
+        <input type="text" />
+        <input type="text" />
+      </div>
+    </div>
+  </body>
+</html>

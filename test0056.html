@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 100%;
+        height: 200px;
+      }
+
+      .origin {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        float: left;
+        margin: 50px;
+        background-color: yellowgreen;
+      }
+
+      .origin div {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+      }
+
+      #moveX:hover {
+        transform: translateX(50px);
+      }
+      #moveY:hover {
+        transform: translateY(50px);
+      }
+      #moveXY:hover {
+        transform: translate(50px, 50px);
+      }
+
+      #scaleX:hover {
+        transform: scaleX(2);
+      }
+      #scaleY:hover {
+        transform: scaleY(1.5);
+      }
+      #scaleXY:hover {
+        transform: scale(0.7);
+      }
+
+      #rotate1:hover {
+        transform: rotate(45deg);
+      }
+      #rotate2:hover {
+        transform: rotate(-45deg);
+      }
+
+      .rotatex:hover {
+        transform: rotateX(45deg);
+      }
+
+      #perspective {
+        perspective: 300px;
+      }
+
+      #rotateX:hover {
+        transform: rotateX(45deg);
+      }
+      #rotateY:hover {
+        transform: rotateY(45deg);
+      }
+      #rotateZ:hover {
+        transform: rotateZ(45deg);
+      }
+      #rotateXYZ:hover {
+        transform: rotate3d(1, 1, 1, 45deg);
+      }
+
+      #skewX:hover {
+        transform: skewX(45deg);
+      }
+      #skewY:hover {
+        transform: skewY(45deg);
+      }
+      #skewXY:hover {
+        transform: skew(45deg, -30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>translate 평행이동 (엑스축, 와이축)</h1>
+    <div id="container">
+      <div class="origin"><div id="moveX">item1</div></div>
+      <div class="origin"><div id="moveY">item2</div></div>
+      <div class="origin"><div id="moveXY">item3</div></div>
+    </div>
+
+    <h1>scale 확대축소 (엑스축, 와이축)</h1>
+    <div id="container">
+      <div class="origin"><div id="scaleX">item1</div></div>
+      <div class="origin"><div id="scaleY">item2</div></div>
+      <div class="origin"><div id="scaleXY">item3</div></div>
+    </div>
+
+    <h1>rotate 회전</h1>
+    <div id="container">
+      <div class="origin"><img src="img/emoji.png" alt="" id="rotate1" /></div>
+      <div class="origin"><img src="img/emoji.png" alt="" id="rotate2" /></div>
+    </div>
+
+    <h1>perspective 원근감</h1>
+    <div id="container">
+      <div class="origin">
+        <div class="rotatex"><img src="img/emoji.png" alt="" /></div>
+      </div>
+      <div class="origin" id="perspective">
+        <div class="rotatex"><img src="img/emoji.png" alt="" /></div>
+      </div>
+    </div>
+
+    <h1>3차원 회전 (엑스축, 와이축)</h1>
+    <div id="container">
+      <div class="origin"><div id="rotateX">item x</div></div>
+      <div class="origin"><div id="rotateY">item y</div></div>
+      <div class="origin"><div id="rotateZ">item z</div></div>
+      <div class="origin"><div id="rotateXYZ">item xyz</div></div>
+    </div>
+
+    <h1>3차원 비틀기 (엑스축, 와이축)</h1>
+    <div id="container">
+      <div class="origin perspective"><div id="skewX">item x</div></div>
+      <div class="origin perspective"><div id="skewY">item y</div></div>
+      <div class="origin perspective"><div id="skewXY">item xy</div></div>
+    </div>
+  </body>
+</html>

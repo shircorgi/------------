@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contents :nth-child(3) {
+        background-color: beige;
+      }
+      .contents p:nth-of-type(3) {
+        background-color: aqua;
+      }
+      .contents p:nth-of-type(3n + 1) {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <p>구조 가상 클래스(p.343, 표10-2)</p>
+    <div class="contents">
+      <p>context1</p>
+      <div>con A</div>
+      <p>context2</p>
+      <p>context3</p>
+      <p>context4</p>
+      <p>context5</p>
+      <p>context6</p>
+      <p>context7</p>
+    </div>
+  </body>
+</html>
