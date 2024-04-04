@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //변수 - 기본 유형
+      var name;
+      name = "HJ";
+      var grade = 4;
+
+      var a = 1;
+      var b = 2;
+      var c = "HJ";
+
+      //변수 - 배열
+      var mathpointsOfstudents = [90, 80, 70];
+      console.log("배열", mathpointsOfstudents);
+      console.log(mathpointsOfstudents.length);
+      console.log(mathpointsOfstudents[1]);
+
+      //변수 - 객체
+      var student = {
+        name: "HJ Jin",
+        major: "comuter engineering",
+      };
+
+      var forUndefined;
+      console.log("typeof_forUndefined", typeof forUndefined);
+
+      //의도적으로 비어있는 값
+      var forNull = null;
+      if (forNull === null) {
+        console.log("null check");
+      } else {
+        console.log("No null");
+      }
+
+      for (let i = 0; i <= 10; i++) {
+        if (i % 3 == 0) {
+          document.write("<span> odd");
+        } else {
+          document.write("<span> " + i + " </span>");
+        }
+      }
+
+      console.log("5%3:", 5 % 3);
+
+      for (let i = 1; i <= 10; i++) {
+        if (i % 3 == 0) {
+          document.write("<span> 짝수 </span>");
+        } else {
+          document.write("<span> " + i + " </span>");
+          //document.write("<span> i </span>");
+        }
+      }
+
+      var a = 10;
+      var b = a++ + 5;
+      console.log("b:", b); // b: 15 = 10 +5
+      console.log("a:", a); // a: 11
+
+      var a = 10;
+      var b = ++a + 5;
+      console.log("b:", b); // b: 16 = 11 + 5
+      console.log("a:", a); // a: 11
+
+      var a = 10;
+      a++;
+      var b = a + 5;
+      console.log("b:", b); // b: 16 = 11 + 5
+      console.log("a:", a); // a: 11
+    </script>
+  </body>
+</html>

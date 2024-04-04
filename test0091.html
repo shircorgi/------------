@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script> 이건 내꺼
+      var startNum = parseInt(prompt("시작점수"));
+      var endNum = parseInt(prompt("종료점수"));
+      var sumNum = 0;
+
+      for (var i = startNum; i <= endNum; i++) {
+        sumNum += i;
+      }
+
+      document.write(`Sum of 1 to 10 = ${sumNum}`);
+    </script> -->
+
+    <!-- <script> 선생님 답안
+      var start = parseInt(prompt("start"));
+      var end = parseInt(prompt("end"));
+      var sumNum = 0;
+
+      for (var num = start; num <= end; num++) {
+        sumNum += num;
+      }
+
+      document.write(`Sum of ${start} to ${end} = ${sumNum}`);
+    </script> -->
+
+    <!-- <script> 이건 내꺼
+      var i = 60;
+      var j = 0;
+
+      for (i; i >= j; i--) {
+        document.write(`<span> ${i} <br>`);
+        if (i === 0) {
+          document.write("발사~");
+        }
+      }
+    </script> -->
+
+    <!-- <script> 이건 내꺼
+      // 다음과 같이 출력하는 프로그램을 이용하여서 작성하시오.
+
+      for (row = 1; row <= 9; row++) {
+        for (col = 1; col <= 9; col++) {
+          document.write(`${row * col}`);
+        }
+        document.write("<br>");
+      }
+    </script> -->
+
+    <script>
+      //별과 숫자로 된 트리 만들기
+      //1******
+      //12*****
+
+      for (var hang = 1; hang <= 7; hang++) {
+        for (var yeol = 1; yeol <= hang; yeol++) {
+          document.wirte(`<span>${yeol}</span>`);
+        }
+        for (var yeol = 1; yeol <= 7 - hang; yeol++) {
+          document.write(`<span>*</span>`);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write(`<hr>`);
+      for (var hang = 1; hang <= 7; hang++) {
+        for (var yeol = 1; yeol <= 7; yeol++) {
+          if (hang >= yeol) document.write(`<span>${yeol}</span>`);
+          else document.write(`<span class="star">*</span>`);
+        }
+        document.write(`<br>`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var sumVal = 0;
+      for (var i = 0; i < 6; i++) {
+        document.write(`현재 i 는 ${i} 압니다.`);
+        sumVal = sumVal + i;
+      }
+      document.write(`현재 sumVal은 ${sumVal} 입니다. `);
+    </script>
+
+    <h1>Do-while</h1>
+    <script>
+      var sumVal = 0;
+      var userNumber;
+
+      do {
+        var userNumber = prompt("자연수 입력하세요. 마치려면 0 입력하세요.");
+        userNumber = parseInt(userNumber);
+        sumVal += userNumber;
+      } while (userNumber > 0);
+      document.wirte(`현재 sumVal ${sumVal} 입니다. `);
+    </script>
+
+    <h1>break vs continue</h1>
+    <p>멈추는 break, 건너뛰는 continue</p>
+    <script>
+      var myCount = 0;
+      var isSick = 0;
+
+      for (var day = 1; day <= 90; day++) {
+        isSick++;
+        if (isSick >= 80) break;
+        if (isSick % 10 == 0) continue;
+        myCount++;
+      }
+      document.write(`<span> 나는 ${myCount}일 참여했어요.`);
+    </script>
+
+    <script>
+      var myCount = 0;
+      var myTimeCount = 0;
+      for (var day = 1; day <= 90; day++) {
+        for (var time = 1; time <= 8; time++) {
+          myTimeCount++;
+        }
+        myDayCount++;
+      }
+      document.write(
+        `<span> 나는 ${myCount}일, ${myTimeCount}시간 참여했어요.`
+      );
+    </script>
+
+    <script>
+      for (var dan = 2; dan <= 9; dan++) {
+        document.write(`<h1> ${i}단 </h1>`);
+        for (var gopsu = 1; gopsu <= 9; gopsu++) {
+          document.write(` ${dan} x ${gopsu} = ${dan * gopsu} `);
+        }
+      }
+    </script>
+  </body>
+</html>

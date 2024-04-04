@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var userNumber = prompt("숫자를 입력하세요");
+      if (userNumber !== "" && userNumber !== null) {
+        // 입력된 숫자가 의미가 있으면,
+        //공백 상태 중 확인 누르면 빈 문자열, 취소 누르면 null
+        if (userNumber % 3 === 0) {
+          alert("입력된 숫자는 3의 배수예요");
+        } else {
+          alert("입력된 숫자는 3의 배수가 아니예요");
+        }
+      } else {
+        // userNumber === ""
+        alert("아무 것도 넣지 않았어요!");
+      }
+    </script>
+  </body>
+</html>
