@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table,
+      td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+      }
+
+      #seat3 {
+        color: white;
+        background-color: bisque;
+      }
+    </style>
   </head>
   <body>
     <!-- <script> 이건 내꺼
@@ -54,7 +66,7 @@
       }
     </script> -->
 
-    <script>
+    <!-- <script>
       //별과 숫자로 된 트리 만들기
       //1******
       //12*****
@@ -77,6 +89,40 @@
         }
         document.write(`<br>`);
       }
+    </script> -->
+
+    <h1>자리 배치도</h1>
+
+    <script>
+      var totalNum = parseInt(prompt("총 몇 명인가요?"));
+      var colMax = parseInt(prompt("한 줄에 몇 명 앉나요?"));
+
+      if (totalNum % colMax === 0) {
+        rowNum = parseInt(totalNum / colMax);
+      } else {
+        rowNum = parseInt(totalNum / colMax) + 1;
+      }
+      document.write("<table>");
+      for (var row = 0; row < rowNum; row++) {
+        document.write("<tr>");
+        for (var col = 0; col < colMax; col++) {
+          //좌석번호
+          seatNo = col + 1 + row * colMax;
+          if (seatNo > totalNum) break;
+          document.write(`<td id= "seat ${seatNo}">`);
+          document.write(`좌석 ${seatNo}`);
+          document.write("</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+      var mySeatNum = parseInt(prompt("어디 앉을래?"));
+
+      var mySeat = document.querySelector(`#seat${mySeatNum}`);
+      mySeat.onclick = function () {
+        mySeat.style.color = "white";
+        mySeat.style.background = "blue";
+      };
     </script>
   </body>
 </html>
