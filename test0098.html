@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #desc {
+        display: none;
+      }
+      #open {
+        background-color: rgba(255, 255, 255, 0.445);
+        position: absolute;
+        top: 180px;
+        left: 5%;
+        border: solid rgba(0, 0, 0, 0);
+      }
+      #item {
+        position: relative;
+        width: 300px;
+      }
+      #item img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="item">
+      <img src="img/flower.jpg" alt="" />
+      <button id="open">상세 설명 보기</button>
+      <div id="desc">
+        <h1>등심 붓꽃</h1>
+        <p>
+          설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명
+          설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명
+          설명 설명 설명 설명 설명 설명 설명 설명 설명 설명
+        </p>
+        <button id="close">상세 설명 닫기</button>
+        <button id="test">test</button>
+      </div>
+    </div>
+
+    <script>
+      //방법 1
+      let showBtn = document.querySelector("#open");
+      showBtn.onclick = showDetail;
+
+      //방법 2
+      document.querySelector("#close").onclick = showDetail;
+
+      //방법 3
+      document.querySelector("#test").onclick = function () {
+        alert("test");
+      };
+    </script>
+  </body>
+</html>

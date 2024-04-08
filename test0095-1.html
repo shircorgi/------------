@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #desc {
+        display: none;
+      }
+      #open {
+        background-color: rgba(255, 255, 255, 0.445);
+        position: absolute;
+        top: 180px;
+        left: 5%;
+        border: solid rgba(0, 0, 0, 0);
+      }
+      #item {
+        position: relative;
+        width: 300px;
+      }
+      #item img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="item">
+      <img src="img/flower.jpg" alt="" />
+      <button id="open" onclick="toggle()">상세 설명 보기</button>
+      <div id="desc">
+        <h1>등심 붓꽃</h1>
+        <p>
+          설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명
+          설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명
+          설명 설명 설명 설명 설명 설명 설명 설명 설명 설명
+        </p>
+      </div>
+    </div>
+
+    <script>
+      let descStatus = false;
+      function toggle() {
+        if (descStatus == false) {
+          document.querySelector("#desc").style.display = "block";
+          document.querySelector("#open").innerText = "상세 설명 닫기";
+          descStatus = true;
+        } else {
+          document.querySelector("#desc").style.display = "none";
+          descStatus = false;
+          document.querySelector("#open").innerText = "상세 설명 보기";
+        }
+      }
+    </script>
+  </body>
+</html>
