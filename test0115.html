@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="newjeans" src="img/뉴진스.jpg" alt="hypeboy" />
+    <p id="click"></p>
+
+    <script>
+      document.getElementById("newjeans").addEventListener("click", (e) => {
+        document.getElementById(
+          "click"
+        ).innerText = `event type:${e.type}, x:${e.pageX}, y:${e.pageY}`;
+      });
+    </script>
+  </body>
+</html>

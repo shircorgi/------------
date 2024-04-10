@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      img {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 650px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        id="bigpic"
+        style="width: 100%"
+        src="img/coffee-blue.jpg"
+        alt="blue"
+      />
+      <img
+        onclick="select(`blue`)"
+        style="width: 32%"
+        src="img/coffee-blue.jpg"
+        alt="blue"
+      />
+      <img
+        onclick="select(`gray`)"
+        style="width: 32%"
+        src="img/coffee-gray.jpg"
+        alt="gray"
+      />
+      <img
+        onclick="select(`pink`)"
+        style="width: 32%"
+        src="img/coffee-pink.jpg"
+        alt="pink"
+      />
+    </div>
+
+    <script>
+      function select(color) {
+        var imgPath = `img/coffee-${color}.jpg`;
+        document.getElementById("bigpic").setAttribute("src", imgPath);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="openPop4()">popup 4 open</button>
+    <script>
+      window.open("test0105_popup.html", "pop", "width=500, height=400");
+      window.open(
+        "test0105_popup2.html",
+        "pop2",
+        "width=500, height=400 left= 100"
+      );
+      window.open(
+        "test0105_popup3.html",
+        "pop3",
+        "width=500, height=400 left= 200"
+      );
+      function openPop4() {
+        window.open(
+          "test0105_popup4.html",
+          "pop2",
+          "width=500, height=400 left= 200"
+        );
+      }
+    </script>
+  </body>
+</html>

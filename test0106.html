@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var newWin = window.open(
+        "test0105_popup.html",
+        "",
+        "width=500, height=400"
+      );
+      console.log("newWin", newWin);
+      if (newWin == null) {
+        alert("팝업 허용해주세요!!!");
+      } else {
+        newWin.moveBy(100, 100);
+      }
+    </script>
+  </body>
+</html>
