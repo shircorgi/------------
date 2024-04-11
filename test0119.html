@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Web Programming</h1>
+    <p>Todo-list</p>
+    <input type="text" id="subject" />
+    <button onclick="addP()">ADD</button>
+    <button onclick="addP_rev()">TOP ADD</button>
+    <div id="info"></div>
+    <script>
+      function addP_rev() {
+        let subject = document.getElementById("subject");
+        let newP = document.createElement("P");
+        let newTxt = document.createTextNode(subject.value);
+        newP.appendChild(newTxt);
+        document.getElementById("info").insertBefore(newP, info.childNodes[0]);
+        subject.value = "";
+      }
+      function addP() {
+        let subject = document.getElementById("subject");
+        let newP = document.createElement("P");
+        let newTxt = document.createTextNode(subject.value);
+        newP.appendChild(newTxt);
+        document.getElementById("info").appendChild(newP);
+        subject.value = "";
+
+        let items = document.querySelectorAll("p");
+        for (let i = 0; i < items.length; i++) {
+          items[i].addEventListener("click", function () {
+            if (this.parentNode) {
+              this.parentNode.removeChild(this);
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
